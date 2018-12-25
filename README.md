@@ -1,5 +1,5 @@
 # console-inject
-Node.js Console 模块。
+Node.js console 模块。
 
 [![npm package](https://nodei.co/npm/console-inject.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/console-inject)
 
