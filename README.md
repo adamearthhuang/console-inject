@@ -12,7 +12,7 @@ npm install console-inject --save
 ```
 
 ```
-npm install console-inject --g
+npm install console-inject -g
 ```
 
 ## 使用
