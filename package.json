@@ -1,0 +1,34 @@
+{
+  "name": "console-inject",
+  "version": "1.0.0",
+  "description": "Console logging with color, timestamp, filename and line number.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "bin": {
+    "console-inject": "bin.js"
+  },
+  "author": "Adamearth Huang",
+  "license": "MIT",
+  "keywords": [
+    "console",
+    "log",
+    "linenumber",
+    "filename",
+    "color"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamearthhuang/console-inject.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adamearthhuang/console-inject/issues"
+  },
+  "homepage": "https://github.com/adamearthhuang/console-inject#readme",
+  "dependencies": {
+    "callsite": "^1.0.0",
+    "handlebars": "^4.0.12",
+    "shelljs": "^0.8.3"
+  }
+}
