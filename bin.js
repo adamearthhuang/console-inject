@@ -38,7 +38,7 @@ try {
       app: appFileName
     }));
 
-    success('generate file .app');
+    success('generate file ".app" successed');
     success(cmd);
     success('starting...');
 
