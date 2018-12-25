@@ -24,8 +24,6 @@ require('console-inject');
 
 当然，你也可以通过命令进行注入，它支持诸如 `node`、`nodemon` 等各种 Node.js 应用启动器，无需改动代码即可享受 console-inject 带来的特性：
 
-```sh
+```
 console-inject node app.js
 ```
-
-
