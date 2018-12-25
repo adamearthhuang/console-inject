@@ -43,7 +43,7 @@ function write(type, string) {
   process.stdout.write(colors[type] + util.format('[%s] [%s] %s:%d - %s', now(), type, stack[2].getFileName(), stack[2].getLineNumber(), string) + colors.NONE + '\n');
   
   if (type === 'TRACE') {
-    process.stdout.write(colors.TRACE + '    at ' + stack.splice(2).join('\n    at ') + colors.NONE + '\n')
+    process.stdout.write(colors.TRACE + '    at ' + stack.splice(2).join('\n    at ') + colors.NONE + '\n');
   }  
 }
 

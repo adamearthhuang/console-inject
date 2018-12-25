@@ -1,6 +1,6 @@
 {
   "name": "console-inject",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Console logging with color, timestamp, filename and line number.",
   "main": "index.js",
   "scripts": {
@@ -14,6 +14,7 @@
   "keywords": [
     "console",
     "log",
+    "timestamp",
     "linenumber",
     "filename",
     "color"

@@ -6,4 +6,3 @@ console.info('hello, console-inject.');
 console.log('hello, console-inject.');
 console.error('hello, console-inject.');
 console.trace('hello, console-inject.');
-
