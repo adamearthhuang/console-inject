@@ -9,54 +9,55 @@ try {
   var libPath = process.argv[1];
   var argv = process.argv.splice(2); 
 
-  success('console-inject ' + argv.join(' '));
-  success('1.0.3');
-  success('injecting...');
+  yellow('console-inject ' + argv.join(' '));
+  yellow('1.0.4');
+  yellow('injecting...');
 
-  var appFileName = '', inject = false;
+  var appPath = '', isJSFile = false;
   for (var i = 0; i < argv.length; i++) {
     if (path.extname(argv[i]) === '.js') {
-      appFileName = argv[i];
-      if (appFileName.indexOf('./') !== 0) {
-        appFileName = './' + appFileName;
-      }
+      appPath = argv[i];
       argv[i] = '.app';
-      inject = true;
+      isJSFile = true;
       break;
     }
   }
 
-  if (inject) {
-    success('inject successed');
+  if (isJSFile) {
+    green('recognized main file "' + appPath + '"');
 
-    // good: console-inject node good.js -> node .app
-    // bad: console-inject node bad -> node bad
+    // console-inject node app.js -> node .app
     var cmd = argv.join(' ');
 
     fs.writeFileSync('.app', handlebars.compile(fs.readFileSync(path.join(__dirname, 'template.app')).toString())({ 
       lib: path.dirname(libPath).replace(/\\/g, '/'),
-      app: appFileName
+      app: appPath.indexOf('./') === 0 ? appPath : './' + appPath
     }));
 
-    success('generate file ".app" successed');
-    success(cmd);
-    success('starting...');
+    green('generated main file ".app"');
+    green('inject successed');
+    yellow(cmd);
+    yellow('starting...');
 
     shelljs.exec(cmd);
   } else {
-    failure('JS file is undefined');
-    failure('inject failed');
+    red('main file is not recognized');
+    red('inject failed');
   }
 
 } catch (e) {
-  failure(e);
-  failure('inject failed');
+  red(e);
+  red('inject failed');
 }
 
-function success() {
+function yellow() {
+  process.stdout.write('\033[33m' + '[console-inject] ' + util.format.apply(this, arguments) + '\033[0m' + '\n'); 
+}
+
+function green() {
   process.stdout.write('\033[32m' + '[console-inject] ' + util.format.apply(this, arguments) + '\033[0m' + '\n'); 
 }
 
-function failure() {
+function red() {
   process.stdout.write('\033[91m' + '[console-inject] ' + util.format.apply(this, arguments) + '\033[0m' + '\n'); 
 }

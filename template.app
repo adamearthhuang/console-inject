@@ -3,16 +3,16 @@ var	util = require('util');
 try {
   require('{{{lib}}}');
   require('{{{app}}}');
-  success('startup');
+  green('startup');
 } catch (e) {
-  failure(e);
-  failure('exit');
+  red(e);
+  red('exit');
 }
 
-function success() {
+function green() {
   process.stdout.write('\033[32m' + '[console-inject] ' + util.format.apply(this, arguments) + '\033[0m' + '\n'); 
 }
 
-function failure() {
+function red() {
   process.stdout.write('\033[91m' + '[console-inject] ' + util.format.apply(this, arguments) + '\033[0m' + '\n'); 
 }
