@@ -4,7 +4,7 @@ Node.js console 模块。
 [![npm package](https://nodei.co/npm/console-inject.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/console-inject)
 
 ## 预览
-![console-inject](https://github.com/adamearthhuang/console-inject/blob/master/console-inject.png)
+![console-inject](./console-inject.png)
 
 ## 起步
 ```
