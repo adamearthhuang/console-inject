@@ -1,28 +1,24 @@
 # console-inject
-Node.js console 模块。
+Node.js console logging with color, timestamp, filename and line number.
 
 [![npm package](https://nodei.co/npm/console-inject.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/console-inject)
 
-## 预览
+## Preview
 ![console-inject](./console-inject.png)
 
-## 起步
+## Installing
 ```
-npm install console-inject --save
-```
-
-```
-npm install console-inject -g
+npm install console-inject
 ```
 
 ## 使用
-从对 `console` 使用场景的实际考虑，console-inject 采用了对原生 `console` 的 `log`、`info`、`warn`、`trace`、`debug`、`error` 方法覆盖重写的技术方案，提供了日志的时间戳、文件路径、代码行号、类型颜色等特性，所以只需在程序入口引入即可注入：
+In consideration of the `console` usage, console-inject overrides `console.log`, `console.info`, `console.warn`, `console.trace`, `console.debug`, `console.error`. So, it's ok that you just require "console-inject" to inject before the main program entry point.     
 
 ```javascript
 require('console-inject');
 ```
 
-当然，你也可以通过命令进行注入，它支持诸如 `node`、`nodemon` 等各种 Node.js 应用启动器，无需改动代码即可享受 console-inject 带来的特性：
+Of course, you can also inject by command, console-inject supports various Node.js application starters such as `node`, `nodemon`, etc. In that way, you can enjoy the console-inject features without changing the program.
 
 ```
 console-inject node app.js
