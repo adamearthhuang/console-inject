@@ -10,7 +10,7 @@ try {
   var argv = process.argv.splice(2); 
 
   yellow('console-inject ' + argv.join(' '));
-  yellow('1.0.4');
+  yellow('1.0.8');
   yellow('injecting...');
 
   var appPath = '', isJSFile = false;
