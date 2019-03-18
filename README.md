@@ -11,7 +11,7 @@ Node.js console logging with color, timestamp, filename and line number.
 npm install console-inject
 ```
 
-## 使用
+## Usage
 In consideration of the `console` usage, console-inject overrides `console.log`, `console.info`, `console.warn`, `console.trace`, `console.debug`, `console.error`. So, it's ok that you just require "console-inject" to inject before the main program entry point.     
 
 ```javascript
